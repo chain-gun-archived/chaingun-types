@@ -1,15 +1,16 @@
 {
   "name": "@chaingun/types",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "ChainGun shared types",
   "main": "build/main/index.js",
   "typings": "build/main/index.d.ts",
   "module": "build/module/index.js",
-  "repository": "https://github.com/go1dfish/@chaingun/types",
+  "repository": "git+ssh://git@github.com/chain-gun/types",
   "license": "MIT",
   "keywords": [],
   "scripts": {
     "describe": "npm-scripts-info",
+    "prepare": "run-s build",
     "build": "run-s clean && run-p build:*",
     "build:main": "tsc -p tsconfig.json",
     "build:module": "tsc -p tsconfig.module.json",
@@ -85,7 +86,8 @@
     }
   },
   "prettier": {
-    "singleQuote": true
+    "singleQuote": true,
+    "semi": false
   },
   "nyc": {
     "extends": "@istanbuljs/nyc-config-typescript",
