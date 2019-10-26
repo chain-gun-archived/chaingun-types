@@ -44,6 +44,7 @@ export interface GunMsg {
 
   readonly ack?: number | boolean
   readonly err?: any
+  readonly ok?: boolean | number
 }
 
 /**
