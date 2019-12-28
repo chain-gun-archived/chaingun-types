@@ -1,7 +1,10 @@
 import { GunGraphData, GunNode } from './Gun'
 
 export interface GunGetOpts {
-  readonly '.': string
+  readonly '.'?: string
+  readonly '>'?: string
+  readonly '<'?: string
+  readonly '%'?: string
 }
 
 export interface GunGraphAdapter {
