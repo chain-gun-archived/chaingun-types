@@ -23,4 +23,9 @@ export interface GunGraphAdapter {
   readonly getChangesetFeed?: (
     from: string
   ) => () => Promise<ChangeSetEntry | null>
+
+  readonly onChange?: (
+    handler: (change: ChangeSetEntry) => void,
+    from?: string
+  ) => () => void
 }
